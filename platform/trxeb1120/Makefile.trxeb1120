@@ -1,0 +1,12 @@
+#ARCH_RADIO_SOURCES=cc1120-msp-arch.c
+#PLATFORMAPPS+=cc1120
+
+vpath %.c $(CONTIKI)/platform/trxeb
+vpath %.h $(CONTIKI)/platform/trxeb
+vpath %.S $(CONTIKI)/platform/trxeb
+CFLAGS += -I $(CONTIKI)/platform/trxeb
+
+include $(CONTIKI)/platform/trxeb/Makefile.trxeb
+
+contiki-$(TARGET).a: ${addprefix $(OBJECTDIR)/,symbols.o}
+#	$(AR) rcf $@ $^

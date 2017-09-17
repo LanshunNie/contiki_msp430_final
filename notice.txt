@@ -1,0 +1,58 @@
+/------------------------------------------------------------/
+new add receive DIS don't reset min period
+/------------------------------------------------------------/
+cc1120-config.h   define IOCFG_GPIO_CFG_HIGHZ to save energy
+
+#define CC1120_SETTING_IOCFG3               IOCFG_GPIO_CFG_CS       //0x11   //IOCFG_GPIO_CFG_HIGHZ     HIGHZ low power
+#define CC1120_SETTING_IOCFG2               IOCFG_GPIO_CFG_RXTX_OR_IDLE    //0x26  //IOCFG_GPIO_CFG_HIGHZ     HIGHZ low power
+
+/-----------------------------------------------------------/
+mist-exp5438 function watchdog-reboot()  real reboot 0xDEAD  , 0 also real reboot
+
+WDTCTL = 0;   //0xDEAD    //0 
+
+/-----------------------------------------------------------/
+mist-exp5438  clock.c / msp430.c
+
+orpl-conf   rank_w up   mrhof drop packet punish 
+
+
+/-----------------------------------------------------------/
+
+new add wake node function
+
+/-----------------------------------------------------------/
+add ckecksum  to slip packets when SLIP_CRC_ON is defined 
+
+update core/dev/slip.h  core/dev/slip.c  tools/tunslip6.c
+/-----------------------------------------------------------/
+
+/-----------------------------------------------------------/
+update correct energy time,correct ¾§Õñ Crystal oscillator ,32k don't use interval Capacitance
+
+
+/-----------------------------------------------------------/
+
+new add orpl bitmap panid limit
+
+new add rnfd  //root node fail detect
+
+update rnfd  //root node fail detect ,add seq judge more new.
+
+/-----------------------------------------------------------/
+
+update rnfd  //addr change
+
+/-----------------------------------------------------------/
+new add rnfd common node select timesource.
+/-----------------------------------------------------------/
+new add app auto-sleep.
+
+/-----------------------------------------------------------/
+new add app multi-subnet
+
+/-----------------------------------------------------------/
+add auto sleep macro definition and some printf for debug.
+
+/-----------------------------------------------------------/
+

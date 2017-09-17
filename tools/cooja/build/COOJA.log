@@ -1,0 +1,96 @@
+[14:22:29 - main] [Cooja.java:3181] [WARN] - JAVA_HOME environment variable not set, Cooja motes may not compile
+[14:22:29 - AWT-EventQueue-0] [Cooja.java:2865] [INFO] - External tools default settings: /external_tools_linux_64.config
+[14:22:29 - AWT-EventQueue-0] [Cooja.java:2895] [INFO] - External tools user settings: /root/.cooja.user.properties
+[14:22:38 - AWT-EventQueue-0] [Simulation.java:420] [INFO] - Simulation random seed: 123456
+[14:22:38 - AWT-EventQueue-0] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
+[14:22:58 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make udp-server.sky TARGET=sky 
+[14:23:01 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-server.sky
+[14:23:11 - AWT-EventQueue-0] [CompileContiki.java:140] [INFO] - > make udp-client.sky TARGET=sky 
+[14:23:23 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:23 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:23 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:23 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:23 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:23 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:23 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:23 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:23 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:23 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:23 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:23 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:23 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:23 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:23 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:23 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:24 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:24 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:24 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:24 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:24 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:24 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:24 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:24 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:24 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:24 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:24 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:24 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:24 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:24 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:24 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:24 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:24 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:24 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:24 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:24 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:24 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:24 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:24 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:24 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:23:31 - Thread-2] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1459751011537
+[14:23:35 - Thread-2] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1459751015381	Duration: 3844 ms	Simulated time 8931 ms	Ratio 2.3233610822060355
+[14:24:07 - AWT-EventQueue-0] [AbstractRadioMedium.java:198] [FATAL] - Connection source turned off radio: org.contikios.cooja.mspmote.interfaces.Msp802154Radio@2e78101a
+[14:24:11 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-server.sky
+[14:24:16 - Thread-3] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1459751056121
+[14:24:17 - Thread-3] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1459751057073	Duration: 952 ms	Simulated time 409204 ms	Ratio 429.83613445378154
+[14:24:30 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:30 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:30 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:30 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:30 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:30 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:30 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:30 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:30 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:30 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:30 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:30 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:30 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:30 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:30 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:30 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:30 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:30 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:30 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:30 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:30 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:30 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:30 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:30 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:30 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:30 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:30 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:30 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:30 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:30 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:30 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:30 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:30 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:30 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:30 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:30 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:30 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:31 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:31 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:31 - AWT-EventQueue-0] [MspMote.java:233] [INFO] - Loading firmware from: /home/ubuntu/contiki3-11/examples/ipv6/rpl-udp/udp-client.sky
+[14:24:39 - Thread-4] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1459751079385
+[14:24:53 - Thread-4] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1459751093699	Duration: 14314 ms	Simulated time 436901 ms	Ratio 30.52263518233897
