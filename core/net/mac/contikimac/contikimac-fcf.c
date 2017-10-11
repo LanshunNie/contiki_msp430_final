@@ -1213,7 +1213,7 @@ input_packet(void)
         ctimer_stop(&ct);
       }
 
-#if RDC_WITH_DUPLICATE_DETECTION & (!ORPL_BITMAP_DUPLICATE_DETECTION)
+#if RDC_WITH_DUPLICATE_DETECTION 
       /* Check for duplicate packet. */
       duplicate = mac_sequence_is_duplicate();
       if(duplicate) {
