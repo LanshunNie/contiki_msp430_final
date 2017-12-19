@@ -108,9 +108,9 @@ static struct ctimer send_ct;
 static void  msg_handler(char *appdata,int appdata_length);
 
 
-static int ctl_content_length;
+//static int ctl_content_length;
 
-bool uploadFlag;
+//bool uploadFlag;
 
 static int data_length;
 /*---------------------------------------------------------------------------*/
@@ -120,7 +120,7 @@ AUTOSTART_PROCESSES(&udp_client_process);
 #define FWD_DELAY()  (NETSTACK_RDC.channel_check_interval())
 static clock_time_t
 random_delay(){
-  return  (CLOCK_SECOND*30 + random_rand()%((FWD_DELAY()*uip_ds6_nbr_num()*3/2)+8*CLOCK_SECOND));
+  return  (CLOCK_SECOND*4 + random_rand()%((FWD_DELAY()*uip_ds6_nbr_num()*3/2)+3*CLOCK_SECOND));
 }
 
  static  char msg_da[]= {0x01,0x80,0x68,0x36,0x36,0x68,0x08,0x02,0x72,0x00,0x00,0x00,0x00,0x8F,0x41,0x03,0x22,0x02,0x00,0x00,0x00,0x0F,0x07,0x00,0xF1,0x08,0x04,0x23,0x02,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x02,0x00,0x00,0x00,0x00,0x35,0x23,0x10,0x19,0x08,0x23,0x0A,0x15,0x20,0x05,0x00,0x02,0x00,0x00,0x00,0x00,0x00,0x00,0x9F,0x16,0x00,0x02,0x00,0x00,0x00,0x00,0x00,0x00,0x9F,0x16,0x00,0x02,0x00,0x00,0x00,0x00,0x00,0x00,0x9F,0x16,0x00,0x02,0x00,0x00,0x00,0x00,0x00,0x00,0x9F,0x16,
@@ -133,42 +133,47 @@ static void sendCmd(void *p)
     
     uint8_t* cmd = (uint8_t *)(p);
     
-   // leds_toggle(LEDS_GREEN);   
-
-    for(i=0;i< cmd[1];i++)
+     leds_toggle(LEDS_GREEN);   
+    //printf("cmd:");
+    int temp = 0;
+    for(i=0;i< cmd[0];i++)
     {
-        putchar((unsigned char )cmd[i+2]);
+      // putchar((unsigned char )cmd[i+1]);
+      temp = i+1;
+      printf("%c",cmd[temp]);
     }
- 
-    msg_da[2]=netsynch_authority_level();
+    //printf("\n");
 
-    uip_udp_packet_sendto(client_conn_data, msg_da, sizeof(msg_da),
-                      &server_ipaddr, UIP_HTONS(UDP_SERVER_DATA_PORT));
+     //msg_da[2]=netsynch_authority_level();
+
+    //uip_udp_packet_sendto(client_conn_data, msg_da, sizeof(msg_da),
+                     //  &server_ipaddr, UIP_HTONS(UDP_SERVER_DATA_PORT));
  
 }
 /*---------------------------------------------------------------------------*/
 static void send_read_meter_cmd(void *p)
 {
       int i;
-   //  // printf("meter cmd is:");
+      // printf("meter cmd is:");
     // print_cmd_array();
    //   printf("cmd[0] is: %x",cmd_read_meter[0]);
 
-   // leds_toggle(LEDS_GREEN);   
+    leds_toggle(LEDS_GREEN);   
 
    if(cmd_read_meter[0] != 0xFF)
    {
         // printf("cmd is right burned \n");
-            for(i=0;i< cmd_read_meter[1];i++)
-            {
-                putchar((unsigned char )cmd_read_meter[i+2]);
-            }
-            
- 
-        msg_da[2]=netsynch_authority_level();
+        for(i=0;i< cmd_read_meter[1];i++)
+        {
+            // putchar((unsigned char )cmd_read_meter[i+2]);
+            printf("%c",cmd_read_meter[i+2]);
+        }
+        
+        //printf("\n");
+        // msg_da[2]=netsynch_authority_level();
 
-          uip_udp_packet_sendto(client_conn_data, msg_da, sizeof(msg_da),
-                             &server_ipaddr, UIP_HTONS(UDP_SERVER_DATA_PORT));
+       // uip_udp_packet_sendto(client_conn_data, msg_da, sizeof(msg_da),
+       //                       &server_ipaddr, UIP_HTONS(UDP_SERVER_DATA_PORT));
     }
 
 }
@@ -197,28 +202,27 @@ static void send_read_meter_cmd(void *p)
 
 /*---------------------------------------------------------------------------*/
 static uint8_t
-contain_node(uint8_t data_len,char *data){
+contain_node(uint8_t addr_count,char *data){
 
   uint8_t contain_flag = 0;
 #if 0
-  int i=0;
-  for(i=0;i<data_len;i++){
-    printf("%02x,",data[i]);
+  int j=0;
+  for(j=0;j<addr_count *8;j++){
+    printf("%02x,",data[j]);
   }
   printf("\n");
 #endif
   int i = 0;
-  linkaddr_t *addr = NULL;
-  if(data_len % 8 == 0){
-  	 for(i= 0;i< data_len/8;i++){
-  		memcpy(addr,data+i*8,8);
-  		if(linkaddr_cmp(addr,&linkaddr_node_addr)){
-     		contain_flag =1;
-     		break;
-    	}
-  	}
+  linkaddr_t addr;
+  
+  for(i= 0;i< addr_count;i++){
+  	memcpy(&addr.u8,data+i*8,8);
+  	if(linkaddr_cmp(&addr,&linkaddr_node_addr)){
+     	contain_flag =1;
+     	break;
+    }
   }
-    
+  
   return contain_flag;
 }
 /*---------------------------------------------------------------------------*/
@@ -235,7 +239,8 @@ tcpip_handler(void)
     memcpy(appdata,(char *)uip_appdata + 1,appdata_length);
     appdata[appdata_length] = '\0';
 
-//    unsigned char ctl_content_length = 0;
+    uint8_t adrr_count = 0;
+
     memset(ack_buffer,0,MAX_PAYLOAD_LEN);
 
     global_type = appdata[0];
@@ -251,12 +256,13 @@ tcpip_handler(void)
       break;
 
       case MCAST_TO_SOME_NODE: 
-        ctl_content_length = (unsigned char) appdata[1];
-        if( contain_node(appdata_length - 2 - ctl_content_length,appdata + 2))
+        adrr_count = (unsigned char) appdata[1];
+        
+        if(contain_node(adrr_count,appdata + 2))
         {
-       //  leds_toggle(LEDS_ALL);
-      //    printf("receive upload\n");   
-          msg_handler(appdata+34,ctl_content_length);
+         // leds_toggle(LEDS_ALL);
+          // printf("receive upload\n");   
+         msg_handler(appdata+2+adrr_count*8,appdata_length -2- adrr_count*8);
 
         }
       break;
@@ -349,7 +355,7 @@ PROCESS_THREAD(udp_client_process, ev, data)
   // etimer_set(&et,CLOCK_SECOND*3);
   // int i=0;
 
-  uploadFlag=false;
+  //uploadFlag=false;
   
   if(join_mcast_group() == NULL) {
 
@@ -388,7 +394,7 @@ PROCESS_THREAD(udp_client_process, ev, data)
     if (ev==serial_line_event_message2)
     {
 
-    //  leds_toggle(LEDS_GREEN);   
+      leds_toggle(LEDS_GREEN);   
       memset(ack_buffer,0,MAX_PAYLOAD_LEN);
       data_length =(int)((char *)data)[0];
      // data_length = (unsigned char)((char *)data)[0];
@@ -461,6 +467,7 @@ static void  msg_handler(char *appdata,int appdata_length)
 
 
       case CMD_NETWORK_CONF_2:
+          // leds_toggle(LEDS_GREEN);
            setting_network_configuration2((uint8_t*)&appdata[1],appdata_length-1);
                      // ctimer_set(&send_ct,T_INTERVAL*n_id,node_send,NULL); 
 
@@ -484,7 +491,7 @@ static void  msg_handler(char *appdata,int appdata_length)
        //    if(!return_val){
            restore_meter_cmd();
            // print_cmd_array();
-          ctimer_set(&send_ct,random_delay(),send_read_meter_cmd,NULL);
+           ctimer_set(&send_ct,random_delay(),send_read_meter_cmd,NULL);
         //  }           
           // task_schedule_set(&read_data_ts,MUST_TASK,TASK_READY,TASK_PERIOD_DEFAULT,send_read_meter_cmd,NULL);
            
@@ -503,8 +510,10 @@ static void  msg_handler(char *appdata,int appdata_length)
       break;
 
       case CMD_CHECK_WAKEUP:
-        printf("wake check\n");
+        //printf("sche map:FF\n");
         leds_off(LEDS_GREEN);
+        //init_schedule();
+     
         break;
 
       default:  

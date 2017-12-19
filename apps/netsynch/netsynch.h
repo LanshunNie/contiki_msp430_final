@@ -120,6 +120,10 @@ void netsync_common_timesource(void);
 
 void netsync_start_common_request(void);
 
+void init_schedule(void);
+
+uint8_t netsync_schedule_all_on(void);
+
 #if 1
 void init_concentrator_ipv6addr(void);
 

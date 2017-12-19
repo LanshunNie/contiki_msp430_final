@@ -30,7 +30,17 @@ obj_trxeb1120/uip-ds6-nbr.o: ../../../core/net/ipv6/uip-ds6-nbr.c \
  ../../../core/./net/orpl-bitmap/orpl-bitmap-conf.h \
  ../../../core/./net/rpl/rpl.h ../../../core/./net/rpl/rpl-conf.h \
  ../../../core/net/orpl-bitmap/orpl-bitmap-conf.h \
- ../../../core/./sys/ctimer.h ../../../core/./net/ip/uip-debug.h
+ ../../../core/./sys/ctimer.h ../../../core/./net/rnfd/rnfd.h \
+ ../../../core/./net/rnfd/rnfd-conf.h \
+ ../../../core/./net/rnfd/rnfd-icmp6.h \
+ ../../../core/./net/rnfd/rnfd-root.h ../../../core/./net/rnfd/rnfd.h \
+ ../../../core/./net/rpl/rpl-private.h \
+ ../../../core/./net/ipv6/multicast/uip-mcast6.h \
+ ../../../core/./net/ipv6/multicast/uip-mcast6-route.h \
+ ../../../core/./net/ipv6/multicast/smrf.h \
+ ../../../core/./net/ipv6/multicast/roll-tm.h \
+ ../../../core/./net/ipv6/multicast/uip-mcast6-stats.h \
+ ../../../core/./net/ip/uip-debug.h
 ../../../core/net/ipv6/uip-ds6-nbr.c :
  ../../../core/./lib/list.h ../../../core/./net/linkaddr.h :
  ../../../platform/mist-exp5438/contiki-conf.h :
@@ -63,4 +73,14 @@ obj_trxeb1120/uip-ds6-nbr.o: ../../../core/net/ipv6/uip-ds6-nbr.c \
  ../../../core/./net/orpl-bitmap/orpl-bitmap-conf.h :
  ../../../core/./net/rpl/rpl.h ../../../core/./net/rpl/rpl-conf.h :
  ../../../core/net/orpl-bitmap/orpl-bitmap-conf.h :
- ../../../core/./sys/ctimer.h ../../../core/./net/ip/uip-debug.h :
+ ../../../core/./sys/ctimer.h ../../../core/./net/rnfd/rnfd.h :
+ ../../../core/./net/rnfd/rnfd-conf.h :
+ ../../../core/./net/rnfd/rnfd-icmp6.h :
+ ../../../core/./net/rnfd/rnfd-root.h ../../../core/./net/rnfd/rnfd.h :
+ ../../../core/./net/rpl/rpl-private.h :
+ ../../../core/./net/ipv6/multicast/uip-mcast6.h :
+ ../../../core/./net/ipv6/multicast/uip-mcast6-route.h :
+ ../../../core/./net/ipv6/multicast/smrf.h :
+ ../../../core/./net/ipv6/multicast/roll-tm.h :
+ ../../../core/./net/ipv6/multicast/uip-mcast6-stats.h :
+ ../../../core/./net/ip/uip-debug.h :

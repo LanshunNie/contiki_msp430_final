@@ -668,7 +668,7 @@ send_packet(mac_callback_t mac_callback, void *mac_callback_ptr,
 #if TEST_ERROR_WAKE
   return MAC_TX_OK;
 #endif
-  
+
 // inactive don't send packet ,just return mac_tx_ok ;
 #if TRXEB1120_CONF_LOWPOWER 
 #if LOW_LATENCY
@@ -816,9 +816,9 @@ send_packet(mac_callback_t mac_callback, void *mac_callback_ptr,
       }
       off();
 
-      if(is_broadcast){
-        break;
-      }
+      // if(is_broadcast){
+      //   break;
+      // }
 
       t0 = RTIMER_NOW();
       while(RTIMER_CLOCK_LT(RTIMER_NOW(), t0 + CCA_SLEEP_TIME)) {}
@@ -829,7 +829,7 @@ send_packet(mac_callback_t mac_callback, void *mac_callback_ptr,
     we_are_sending = 0;
     off();
 
-#if ROOTNODE
+#if ROOTNODE 
     printf("contikimac: collisions before sending\n");
     //leds_toggle(LEDS_GREEN);
 #endif
@@ -1263,6 +1263,7 @@ input_packet(void)
 #endif /* CONTIKIMAC_SEND_SW_ACK */
 
       if(!duplicate) {
+        //leds_toggle(LEDS_GREEN); 
         NETSTACK_MAC.input();
       }
       return;

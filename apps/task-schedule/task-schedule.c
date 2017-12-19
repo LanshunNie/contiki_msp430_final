@@ -231,6 +231,10 @@ task_schedule_change(void)
 {
   
   if(initialized) {
+    if(netsync_schedule_all_on()) {
+      return;
+    }
+
 #if UIP_CONF_IPV6_RNFD  
     if(get_rnfd_offline_nodag()){
       netsync_common_timesource();
@@ -343,8 +347,6 @@ void task_schedule_stop(struct task_schedule *c)
   list_remove(task_schedule_list, c);
 }
 /*---------------------------------------------------------------------------*/
-
-
 static uint16_t get_rank(void){
     uint16_t rank;
     rpl_dag_t *dag;

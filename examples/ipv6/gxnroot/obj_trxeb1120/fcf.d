@@ -68,6 +68,7 @@ obj_trxeb1120/fcf.o: ../../../core/net/ipv6/multicast/fcf.c \
  ../../../core/net/orpl-bitmap/orpl-bitmap-conf.h \
  ../../../core/sys/ctimer.h ../../../core/./net/orpl-bitmap/orpl-bitmap.h \
  ../../../core/./net/orpl-bitmap/orpl-bitmap-conf.h \
+ ../../../apps/low-latency/low-latency.h ../../../core/sys/clock.h \
  ../../../core/./net/ip/uip-debug.h
 ../../../core/net/ipv6/multicast/fcf.c :
  ../../../core/./contiki.h ../../../core/./contiki-version.h :
@@ -139,4 +140,5 @@ obj_trxeb1120/fcf.o: ../../../core/net/ipv6/multicast/fcf.c \
  ../../../core/net/orpl-bitmap/orpl-bitmap-conf.h :
  ../../../core/sys/ctimer.h ../../../core/./net/orpl-bitmap/orpl-bitmap.h :
  ../../../core/./net/orpl-bitmap/orpl-bitmap-conf.h :
+ ../../../apps/low-latency/low-latency.h ../../../core/sys/clock.h :
  ../../../core/./net/ip/uip-debug.h :

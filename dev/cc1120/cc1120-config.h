@@ -59,7 +59,7 @@
 #define CC1120_SETTING_SYMBOL_RATE1         0x99
 #define CC1120_SETTING_SYMBOL_RATE0         0x99
 #define CC1120_SETTING_AGC_REF              0x3C
-#define CC1120_SETTING_AGC_CS_THR           0x0C     //0C  20 
+#define CC1120_SETTING_AGC_CS_THR           0x10     //0C  20 
 #define CC1120_SETTING_AGC_GAIN_ADJUST      0x00
 #define CC1120_SETTING_AGC_CFG3             0x91
 #define CC1120_SETTING_AGC_CFG2             0x20

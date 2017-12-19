@@ -219,7 +219,11 @@ task_schedule_set(struct task_schedule *c,int ts_type,int ts_state,int ts_period
 void
 task_schedule_change(void)
 {
-   if(initialized) {
+  if(initialized) {
+
+    if(netsync_schedule_all_on()){
+      return;
+    }
 
     struct task_schedule *t;
     

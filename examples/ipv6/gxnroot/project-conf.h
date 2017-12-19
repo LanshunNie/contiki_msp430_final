@@ -99,7 +99,7 @@
 
 #if UIP_MCAST6_CONF_ENGINE == UIP_MCAST6_ENGINE_FCF
 #ifndef LOW_LATENCY
-#define LOW_LATENCY  0     
+#define LOW_LATENCY  1     
 #endif
 
 #undef  NETSTACK_CONF_RDC

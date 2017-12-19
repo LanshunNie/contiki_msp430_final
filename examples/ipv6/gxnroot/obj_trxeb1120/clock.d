@@ -23,7 +23,9 @@ obj_trxeb1120/clock.o: ../../../platform/mist-exp5438/clock.c \
  ../../../apps/auto-sleep/auto-sleep.h ../../../core/./net/ip/uip.h \
  ../../../core/./net/ip/uipopt.h ../../../core/./net/ip/tcpip.h \
  ../../../apps/netsynch/netsynch.h \
- ../../../apps/task-schedule/task-schedule.h
+ ../../../apps/task-schedule/task-schedule.h \
+ ../../../apps/low-latency/low-latency.h ../../../core/sys/clock.h \
+ ../../../apps/low-latency-msg/low-latency-msg.h
 ../../../platform/mist-exp5438/clock.c :
  ../../../core/./contiki.h ../../../core/./contiki-version.h :
  ../../../platform/mist-exp5438/contiki-conf.h :
@@ -50,3 +52,5 @@ obj_trxeb1120/clock.o: ../../../platform/mist-exp5438/clock.c \
  ../../../core/./net/ip/uipopt.h ../../../core/./net/ip/tcpip.h :
  ../../../apps/netsynch/netsynch.h :
  ../../../apps/task-schedule/task-schedule.h :
+ ../../../apps/low-latency/low-latency.h ../../../core/sys/clock.h :
+ ../../../apps/low-latency-msg/low-latency-msg.h :

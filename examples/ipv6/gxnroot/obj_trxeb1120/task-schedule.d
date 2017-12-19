@@ -64,7 +64,17 @@ obj_trxeb1120/task-schedule.o: \
  ../../../core/./net/rime/rmh.h ../../../core/./net/rime/route.h \
  ../../../core/./net/rime/rucb.h ../../../core/./net/rime/timesynch.h \
  ../../../core/./net/rime/trickle.h ../../../core/./net/netstack.h \
- ../../../core/./lib/random.h ../../../apps/auto-sleep/auto-sleep.h
+ ../../../core/./lib/random.h ../../../core/./net/rnfd/rnfd.h \
+ ../../../core/./net/rnfd/rnfd-conf.h \
+ ../../../core/./net/rnfd/rnfd-icmp6.h \
+ ../../../core/./net/rnfd/rnfd-root.h ../../../core/./net/rnfd/rnfd.h \
+ ../../../core/./net/rpl/rpl-private.h \
+ ../../../core/./net/ipv6/multicast/uip-mcast6.h \
+ ../../../core/./net/ipv6/multicast/uip-mcast6-route.h \
+ ../../../core/./net/ipv6/multicast/smrf.h \
+ ../../../core/./net/ipv6/multicast/roll-tm.h \
+ ../../../core/./net/ipv6/multicast/uip-mcast6-stats.h \
+ ../../../apps/auto-sleep/auto-sleep.h
  ../../../apps/task-schedule/task-schedule.c :
  ../../../apps/task-schedule/task-schedule.h ../../../core/./sys/etimer.h :
  ../../../core/./sys/timer.h ../../../core/./sys/clock.h :
@@ -130,4 +140,14 @@ obj_trxeb1120/task-schedule.o: \
  ../../../core/./net/rime/rmh.h ../../../core/./net/rime/route.h :
  ../../../core/./net/rime/rucb.h ../../../core/./net/rime/timesynch.h :
  ../../../core/./net/rime/trickle.h ../../../core/./net/netstack.h :
- ../../../core/./lib/random.h ../../../apps/auto-sleep/auto-sleep.h :
+ ../../../core/./lib/random.h ../../../core/./net/rnfd/rnfd.h :
+ ../../../core/./net/rnfd/rnfd-conf.h :
+ ../../../core/./net/rnfd/rnfd-icmp6.h :
+ ../../../core/./net/rnfd/rnfd-root.h ../../../core/./net/rnfd/rnfd.h :
+ ../../../core/./net/rpl/rpl-private.h :
+ ../../../core/./net/ipv6/multicast/uip-mcast6.h :
+ ../../../core/./net/ipv6/multicast/uip-mcast6-route.h :
+ ../../../core/./net/ipv6/multicast/smrf.h :
+ ../../../core/./net/ipv6/multicast/roll-tm.h :
+ ../../../core/./net/ipv6/multicast/uip-mcast6-stats.h :
+ ../../../apps/auto-sleep/auto-sleep.h :

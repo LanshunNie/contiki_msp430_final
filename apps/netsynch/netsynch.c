@@ -76,7 +76,7 @@ static uint8_t schedule_bitmap_new[18];
 static void netsynch_send(void * p);
 static void prepare_mcast(void);
 static void netsynch_receiver(struct netsynch_msg msg);
-static void init_schedule(void);
+//static void init_schedule(void);
 
 #if ROOTNODE
     static void sent_to_pan(void * p);
@@ -665,6 +665,29 @@ init_schedule(void){
 #endif
 
 }
+
+uint8_t 
+netsync_schedule_all_on(void){
+#if 0
+    printf("sche_map2 :\n");     /*   */
+    int j=0;
+    for (j = 0; j < 18; ++j){     
+      printf("j:%d, %x ",j,schedule_bitmap[j]);
+    }
+#endif
+
+  int i=0;
+  for(i=0;i< sizeof(schedule_bitmap);i++){
+    if(schedule_bitmap[i] != 0xFF){
+      //printf("on:00000\n");
+      return 0;
+    }  
+  }
+  //printf("on:111111\n");
+
+  return 1;
+}
+
 /*---------------------------------------------------------------------------*/
 #if !ROOTNODE
 void
@@ -672,7 +695,7 @@ netsync_start_common_request(void) {
   authority_level = AUTHORITY_LEVEL_UNSYNCHED;
   last_seqnum = 0xff;
   
-  ctimer_set(&common_request_ct,CLOCK_SECOND/2 + random_rand()%(10*CLOCK_SECOND),request_send, NULL);
+  ctimer_set(&common_request_ct,CLOCK_SECOND*5 + random_rand()%(10*CLOCK_SECOND),request_send, NULL);
 }
 #endif
 /*---------------------------------------------------------------------------*/

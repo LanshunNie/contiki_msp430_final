@@ -389,7 +389,8 @@ ISR(RTC,rtcisr)
        set_active_flag(timenow.hour,timenow.minute,timenow.sec);
 
        #if LOW_LATENCY
-       low_latency_flag= set_lowLatency_flag(timenow);
+       if(get_init_flag() == 1)
+          low_latency_flag= set_lowLatency_flag(timenow);
        #endif
 	   
       if(active_flag!=active_flag_one_second_before){
@@ -399,6 +400,7 @@ ISR(RTC,rtcisr)
            task_schedule_change();
 
        #if LOW_LATENCY & ROOTNODE
+
            low_latency_msg_send();
        #endif
 
@@ -551,6 +553,7 @@ clock_time_t get_idle_time(void)  //return 0 means not in active mode .
       break;
     }
     // printf("%d %d\n",counter,index);
+    // printf("%u\n",(10*counter+9-timenow.minute%10)*60+(60-timenow.sec));
     return ((10*counter+9-timenow.minute%10)*60+(60-timenow.sec)); 
   }
   return 0x0;

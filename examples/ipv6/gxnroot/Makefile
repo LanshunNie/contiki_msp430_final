@@ -41,8 +41,8 @@ endif
 MODULES += core/net/ipv6/multicast
 
 #zhangwei set changed for load balance
-APPS += netsynch task-schedule correct-time node-function rdc-control wake low-latency low-latency-msg
-#APPS += netsynch task-schedule correct-time node-function wake low-latency low-latency-msg
+# APPS += netsynch task-schedule correct-time node-function rdc-control wake low-latency low-latency-msg
+APPS += netsynch task-schedule correct-time node-function wake low-latency low-latency-msg
 
 CONTIKI_WITH_IPV6 = 1
 

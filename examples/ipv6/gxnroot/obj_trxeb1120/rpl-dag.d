@@ -36,7 +36,11 @@ obj_trxeb1120/rpl-dag.o: ../../../core/net/rpl/rpl-dag.c \
  ../../../core/./lib/memb.h ../../../apps/netsynch/netsynch.h \
  ../../../core/./net/orpl-bitmap/orpl-bitmap.h \
  ../../../core/./net/orpl-bitmap/orpl-bitmap-conf.h \
- ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip-debug.h
+ ../../../core/./net/mac/frame802154.h ../../../core/./net/rnfd/rnfd.h \
+ ../../../core/./net/rnfd/rnfd-conf.h \
+ ../../../core/./net/rnfd/rnfd-icmp6.h \
+ ../../../core/./net/rnfd/rnfd-root.h ../../../core/./net/rnfd/rnfd.h \
+ ../../../core/net/rnfd/rnfd-root.h ../../../core/./net/ip/uip-debug.h
 ../../../core/net/rpl/rpl-dag.c :
  ../../../core/./contiki.h ../../../core/./contiki-version.h :
  ../../../platform/mist-exp5438/contiki-conf.h :
@@ -75,4 +79,8 @@ obj_trxeb1120/rpl-dag.o: ../../../core/net/rpl/rpl-dag.c \
  ../../../core/./lib/memb.h ../../../apps/netsynch/netsynch.h :
  ../../../core/./net/orpl-bitmap/orpl-bitmap.h :
  ../../../core/./net/orpl-bitmap/orpl-bitmap-conf.h :
- ../../../core/./net/mac/frame802154.h ../../../core/./net/ip/uip-debug.h :
+ ../../../core/./net/mac/frame802154.h ../../../core/./net/rnfd/rnfd.h :
+ ../../../core/./net/rnfd/rnfd-conf.h :
+ ../../../core/./net/rnfd/rnfd-icmp6.h :
+ ../../../core/./net/rnfd/rnfd-root.h ../../../core/./net/rnfd/rnfd.h :
+ ../../../core/net/rnfd/rnfd-root.h ../../../core/./net/ip/uip-debug.h :

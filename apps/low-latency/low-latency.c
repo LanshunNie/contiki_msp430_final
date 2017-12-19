@@ -41,7 +41,7 @@ static uint8_t index_change_flag = 0;
 static uint8_t low_latency_falg =0;
 static uint8_t low_latency_channel_clear_flag = 1;
 static uint8_t low_latency_interval = 10;
-static uint8_t low_latency_active_second = 20;
+static uint8_t low_latency_active_second = 40;
 static struct ctimer auto_sleep_ctimer;
 static int8_t low_latency_active_time = 0;
 /*---------------------------------------------------------------------------*/

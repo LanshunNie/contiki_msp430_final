@@ -60,7 +60,8 @@ obj_trxeb1120/contikimac-fcf.o: \
  ../../../core/./net/ipv6/uip-ds6.h ../../../core/./sys/stimer.h \
  ../../../core/./net/ipv6/uip-nd6.h \
  ../../../core/./net/ipv6/uip-ds6-route.h \
- ../../../core/./net/ipv6/uip-ds6-nbr.h ../../../core/./net/nbr-table.h
+ ../../../core/./net/ipv6/uip-ds6-nbr.h ../../../core/./net/nbr-table.h \
+ ../../../apps/low-latency/low-latency.h
  ../../../core/net/mac/contikimac/contikimac-fcf.c :
  ../../../platform/mist-exp5438/contiki-conf.h :
  ../../../platform/trxeb1120/./platform-conf.h :
@@ -123,3 +124,4 @@ obj_trxeb1120/contikimac-fcf.o: \
  ../../../core/./net/ipv6/uip-nd6.h :
  ../../../core/./net/ipv6/uip-ds6-route.h :
  ../../../core/./net/ipv6/uip-ds6-nbr.h ../../../core/./net/nbr-table.h :
+ ../../../apps/low-latency/low-latency.h :

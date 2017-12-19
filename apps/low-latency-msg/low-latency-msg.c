@@ -24,7 +24,7 @@
 #include <stdio.h>
 
 /*---------------------------------------------------------------------------*/
-#define SEND_LATENCY 3
+#define SEND_LATENCY 4
 
 static void (*low_latency_send)(void *) = NULL;
 static struct ctimer ll_send_ct;

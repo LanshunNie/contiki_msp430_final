@@ -115,7 +115,7 @@ set_link_addr(void)
   }
 #endif
   linkaddr_set_node_addr(&addr);
-#if 0
+#if 1
   int i;
   printf("link addr:");
   for(i = 0; i < sizeof(addr.u8) - 1; i++) {
@@ -262,7 +262,7 @@ main(int argc, char **argv)
 
   process_start(&tcpip_process, NULL);
 
-#if 0
+#if 1
   printf("IPv6 ");
   {
     uip_ds6_addr_t *lladdr;

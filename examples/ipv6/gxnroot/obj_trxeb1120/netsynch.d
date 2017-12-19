@@ -65,6 +65,15 @@ obj_trxeb1120/netsynch.o: ../../../apps/netsynch/netsynch.c \
  ../../../core/net/ip/simple-udp.h \
  ../../../apps/netsynch/netsync-auto-calibrate.h \
  ../../../core/./lib/random.h ../../../apps/task-schedule/task-schedule.h \
+ ../../../core/./net/rnfd/rnfd.h ../../../core/./net/rnfd/rnfd-conf.h \
+ ../../../core/./net/rnfd/rnfd-icmp6.h \
+ ../../../core/./net/rnfd/rnfd-root.h ../../../core/./net/rnfd/rnfd.h \
+ ../../../core/./net/rpl/rpl-private.h \
+ ../../../core/./net/ipv6/multicast/uip-mcast6.h \
+ ../../../core/./net/ipv6/multicast/uip-mcast6-route.h \
+ ../../../core/./net/ipv6/multicast/smrf.h \
+ ../../../core/./net/ipv6/multicast/roll-tm.h \
+ ../../../core/./net/ipv6/multicast/uip-mcast6-stats.h \
  ../../../core/./net/ip/uip-debug.h
 ../../../apps/netsynch/netsynch.c :
  ../../../apps/netsynch/netsynch.h ../../../core/./net/mac/mac.h :
@@ -133,4 +142,13 @@ obj_trxeb1120/netsynch.o: ../../../apps/netsynch/netsynch.c \
  ../../../core/net/ip/simple-udp.h :
  ../../../apps/netsynch/netsync-auto-calibrate.h :
  ../../../core/./lib/random.h ../../../apps/task-schedule/task-schedule.h :
+ ../../../core/./net/rnfd/rnfd.h ../../../core/./net/rnfd/rnfd-conf.h :
+ ../../../core/./net/rnfd/rnfd-icmp6.h :
+ ../../../core/./net/rnfd/rnfd-root.h ../../../core/./net/rnfd/rnfd.h :
+ ../../../core/./net/rpl/rpl-private.h :
+ ../../../core/./net/ipv6/multicast/uip-mcast6.h :
+ ../../../core/./net/ipv6/multicast/uip-mcast6-route.h :
+ ../../../core/./net/ipv6/multicast/smrf.h :
+ ../../../core/./net/ipv6/multicast/roll-tm.h :
+ ../../../core/./net/ipv6/multicast/uip-mcast6-stats.h :
  ../../../core/./net/ip/uip-debug.h :

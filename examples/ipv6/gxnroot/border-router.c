@@ -376,12 +376,12 @@ multicast_send(void * p)
     multicast_send_flag = 1;
     uip_udp_packet_send(mcast_conn, buffer, buffered_data_length + 1);
 
-    sent_to_pan();
+    // sent_to_pan();
     leds_toggle(LEDS_ALL);
   
-    #if LOW_LATENCY
-       ctimer_set(&ct,CLOCK_SECOND*2,root_handle_message,NULL);
-    #endif
+#if LOW_LATENCY 
+    ctimer_set(&ct,CLOCK_SECOND*2,root_handle_message,NULL);
+#endif
   }
 }
 
@@ -433,6 +433,7 @@ set_prefix_64(uip_ipaddr_t *prefix_64)
 static void root_handle_message(void*p){
   msg_handler(buffer+2,buffered_data_length-1);
 }
+
 static void
 tcpip_handler(void)
 {
@@ -460,34 +461,40 @@ tcpip_handler(void)
        // sent_to_pan();
        // multicast_send_flag = 0;
         // msg_handler(buffer+2,buffered_data_length-1);
-       printf("send type:%x-%x\n",(uint8_t)(*(buffer+1)),(uint8_t)(*(buffer+2)) );
+       printf("send type:%x-%x\n",(uint8_t)(*(buffer+1)),(uint8_t)(*(buffer+2)));
 
        // if(multicast_send_flag == 1)
         
       if((uint8_t)(*(buffer+2)) == CMD_WAKEUP) {
         printf("wake dev send\n");
-      }else if(get_idle_time() >=2* 60){      
+    #if LOW_LATENCY 
+        root_handle_message(NULL);
+    #endif
+      }else if(get_idle_time() >=60){      
         multicast_send(NULL);
       }
 
-      #if LOW_LATENCY & 0
-        
+  #if LOW_LATENCY 
+      if((uint8_t)(*(buffer+2)) == CMD_NETWORK_CONF_2){
+          
         if(get_lowLatency_flag() ==1){
-          if(get_low_latency_active_time() < 8){
+          if(get_low_latency_active_time() < 10){
             low_latency_msg_send_register(multicast_send);
           }else{
             multicast_send(NULL);
           }
         }else{
-          if(get_lowLatency_flag() == 0 && get_active_flag() == 0){
+          if(get_active_flag() == 0){
             low_latency_msg_send_register(multicast_send);
+          }else if(get_active_flag() == 1 && get_idle_time() <60){
+            multicast_send(NULL);
           }
         }
-
-      #else
-         root_handle_message(NULL);
+      }
+  #else
+     root_handle_message(NULL);
         // ctimer_set(&ct,CLOCK_SECOND*10,root_handle_message,NULL);
-      #endif
+  #endif
       // printf("ready send\n");
        // task_schedule_set(&root_task_ts,TEMP_TASK,TASK_READY,TASK_PERIOD_DEFAULT,multicast_send,NULL);
          // leds_toggle(LEDS_ALL);
@@ -510,7 +517,6 @@ tcpip_handler(void)
       
     }
    
-
 #if SERVER_REPLY
     //printf("DATA sending reply\n");
     uip_ipaddr_copy(&server_conn->ripaddr, &UIP_IP_BUF->srcipaddr);
@@ -621,12 +627,11 @@ static void  msg_handler(char *appdata,int appdata_length)
 
       //      setting_network_configuration((uint8_t*)&appdata[1],appdata_length-1);    
       // break;
-
       case CMD_NETWORK_CONF_2:
+           leds_on(LEDS_GREEN);
            setting_network_configuration2((uint8_t*)&appdata[1],appdata_length-1);
       break;
  
-
       case CMD_REBOOT:
           ctimer_set(&ct1, (60 * CLOCK_SECOND),NodeReboot,NULL); 
       break;
@@ -637,7 +642,7 @@ static void  msg_handler(char *appdata,int appdata_length)
       break;
       case CMD_WAKEUP:
     //    printf("wake node\n");
-        //leds_on(LEDS_GREEN);
+        leds_on(LEDS_GREEN);
         normalbyte_rfchannel_burn(1,WAKEUP_NODE_RFCHANNEL);
         set_init_flag(1);
 #if WAKEUP_NODE       
@@ -647,8 +652,8 @@ static void  msg_handler(char *appdata,int appdata_length)
         break;
 
       case CMD_CHECK_WAKEUP:
-        printf("wake check\n");
         leds_off(LEDS_GREEN);
+
         break;
 
       default:  

@@ -162,10 +162,10 @@ void cc1120_channel_set(uint8_t c);
 /*------------------------------------------------*/
 /*-------------uart  configure -------------------*/
 #undef  ROOTNODE
-#define ROOTNODE  0
+#define ROOTNODE  1
 
 #ifndef ROOTNODE_CORRECTTIME_TIMEOUT_REBOOT
-#define ROOTNODE_CORRECTTIME_TIMEOUT_REBOOT  1
+#define ROOTNODE_CORRECTTIME_TIMEOUT_REBOOT  0
 #endif
 
 #if 1
@@ -191,12 +191,14 @@ void cc1120_channel_set(uint8_t c);
 #if ROOTNODE
 	#define XT2_115200     1     // baud rate 115200
 	#define USE_4M_CRYSTAL 0  //0
-	#define ROOT_WITH_ENERGY_EFFICIENCY 1
+	#define ROOT_WITH_ENERGY_EFFICIENCY 0
 #else
-	#define WITH_ENERGY_EFFICIENCY 1
+	#define WITH_ENERGY_EFFICIENCY 0
 #endif
 
-#define HEAT_METER 0 // baud rate 2400
+#if !ROOTNODE
+#define HEAT_METER 1 // baud rate 2400
+#endif
 /*------------------------------------------------*/
 #endif /* __PLATFORM_CONF_H__ */
 

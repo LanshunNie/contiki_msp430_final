@@ -123,7 +123,7 @@ send_packet(void *ptr)
   pos+= sizeof(seq_id);
   memcpy(buf+pos,&curr_rank, sizeof(curr_rank));
   pos+= sizeof(curr_rank);
-  uip_udp_packet_sendto(client_conn, buf, MAX_PAYLOAD_LEN,
+  uip_udp_packet_sendto(client_conn, buf, pos,
                         &server_ipaddr, UIP_HTONS(UDP_SERVER_PORT));
   leds_toggle(LEDS_GREEN); 
   PRINT6ADDR(&server_ipaddr);

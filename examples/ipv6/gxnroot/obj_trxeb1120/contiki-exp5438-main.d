@@ -55,6 +55,7 @@ obj_trxeb1120/contiki-exp5438-main.o: \
  ../../../core/./net/ipv6/uip-nd6.h \
  ../../../core/./net/ipv6/uip-ds6-route.h \
  ../../../core/./net/ipv6/uip-ds6-nbr.h ../../../core/./net/nbr-table.h \
+ ../../../apps/low-latency/low-latency.h ../../../core/sys/clock.h \
  ../../../core/./net/ip/uip-debug.h
  ../../../platform/mist-exp5438/contiki-exp5438-main.c :
  ../../../core/./contiki.h ../../../core/./contiki-version.h :
@@ -112,4 +113,5 @@ obj_trxeb1120/contiki-exp5438-main.o: \
  ../../../core/./net/ipv6/uip-nd6.h :
  ../../../core/./net/ipv6/uip-ds6-route.h :
  ../../../core/./net/ipv6/uip-ds6-nbr.h ../../../core/./net/nbr-table.h :
+ ../../../apps/low-latency/low-latency.h ../../../core/sys/clock.h :
  ../../../core/./net/ip/uip-debug.h :

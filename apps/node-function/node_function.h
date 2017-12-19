@@ -44,7 +44,7 @@ enum
 
 #define INDEX_AUTOCAL_INTERVAL       48    //4
 #define INDEX_CAL_OFFSET             52    //2
-#define INDEX_END                    54
+#define INDEX_END                    (54+4)     //54
 
 #define SYSTEM_MONITOR_MSG_LENGTH (INDEX_END)
 
